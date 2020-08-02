@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import project.website.domain.Post;
 import project.website.repository.PostRepository;
 
+import java.util.List;
+
 @Service
 public class PostService {
 
@@ -18,5 +20,14 @@ public class PostService {
     public Post getPost(Long idx){
         Post post = postRepository.findById(idx).orElse(null);
         return post;
+    }
+
+    public List<Post> getAllPosts(){
+        List<Post> posts = postRepository.findAll();
+        return posts;
+    }
+
+    public void savePost(Post post){
+        postRepository.save(post);
     }
 }
