@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/header :: header">
+
 </head>
+
 <body>
-$END$
+<!-- Navigation -->
+<nav th:replace="/fragments/navigation :: navigation"/>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <h1 class="my-4">Page Heading
+                <small>Secondary Text</small>
+            </h1>
+
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Post Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted on January 1, 2020 by
+                    <a href="#">Start Bootstrap</a>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <ul th:replace="/fragments/pagination :: pagination"/>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <!-- Search Widget -->
+            <div th:replace="/widgets/search :: search"></div>
+
+            <!-- Categories Widget -->
+            <div th:replace="/widgets/categories :: categories"></div>
+
+            <!-- Side Widget -->
+            <div th:replace="/widgets/side :: side"></div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer th:replace="fragments/footer :: footer"/>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
