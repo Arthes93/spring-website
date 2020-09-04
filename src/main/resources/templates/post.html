@@ -5,7 +5,7 @@
 <body>
 
 <!-- Navigation -->
-<nav th:replace="/fragments/navigation :: navigation"/>
+<nav th:replace="fragments/navigation :: navigation"/>
 
 <!-- Page Content -->
 <div class="container" th:object="${Post}">
@@ -51,13 +51,13 @@
         <div class="col-md-4">
 
             <!-- Search Widget -->
-            <div th:replace="/widgets/search :: search"></div>
+            <div th:replace="widgets/search :: search"></div>
 
             <!-- Categories Widget -->
-            <div th:replace="/widgets/categories :: categories"></div>
+            <div th:replace="widgets/categories :: categories"></div>
 
             <!-- Side Widget -->
-            <div th:replace="/widgets/side :: side"></div>
+            <div th:replace="widgets/side :: side"></div>
 
         </div>
 
@@ -68,7 +68,7 @@
 <!-- /.container -->
 
 <!-- Footer -->
-<footer th:replace="/fragments/footer :: footer"></footer>
+<footer th:replace="fragments/footer :: footer"></footer>
 
 <!-- Bootstrap core JavaScript -->
 <script src="js/jquery/jquery.min.js"></script>

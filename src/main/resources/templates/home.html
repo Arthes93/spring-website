@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/fragments/header :: header">
+<head th:replace="fragments/header :: header">
 
 </head>
 
 <body>
 <!-- Navigation -->
-<nav th:replace="/fragments/navigation :: navigation"/>
+<nav th:replace="fragments/navigation :: navigation"/>
 
 <!-- Page Content -->
 <div class="container">
@@ -35,19 +35,19 @@
             </div>
 
             <!-- Pagination -->
-            <ul th:replace="/fragments/pagination :: pagination"/>
+            <ul th:replace="fragments/pagination :: pagination"/>
         </div>
 
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
             <!-- Search Widget -->
-            <div th:replace="/widgets/search :: search"></div>
+            <div th:replace="widgets/search :: search"></div>
 
             <!-- Categories Widget -->
-            <div th:replace="/widgets/categories :: categories"></div>
+            <div th:replace="widgets/categories :: categories"></div>
 
             <!-- Side Widget -->
-            <div th:replace="/widgets/side :: side"></div>
+            <div th:replace="widgets/side :: side"></div>
         </div>
 
     </div>
