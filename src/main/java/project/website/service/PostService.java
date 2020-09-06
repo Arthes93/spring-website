@@ -21,7 +21,7 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public Post getPost(Long idx){
+    public Post getPostByIdx(Long idx){
         Post post = postRepository.findById(idx).orElse(null);
         return post;
     }
