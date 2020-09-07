@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: header"/>
+<!--<head th:replace="fragments/header :: header"/>-->
+<head th:replace="fragments/header :: markdownHeader">
 
 <body>
 <nav th:replace="fragments/navigation :: navigation"/>
@@ -11,10 +12,25 @@
         <input type="text" th:value="*{title}" name="title" class="form-control" id="title" placeholder="제목">
     </div>
 
-    <div class="form-group">
-        <label th:for="content">Content</label>
-        <textarea class="form-control" th:value="*{content}" name="content" rows="10"></textarea>
+    <div id="markdown-container">
+        <div id="content" class="section">
+            <div id="edit" class="mode">
+                <div class="content">
+                    <textarea id="markdown" th:value="*{content}" name="content" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div id="preview" class="mode">
+                <div id="output" class="content markdown-body">
+                </div>
+            </div>
+        </div>
     </div>
+
+<!--    <div class="form-group">-->
+<!--        <label th:for="content">Content</label>-->
+<!--        <textarea class="form-control" th:value="*{content}" name="content" rows="10"></textarea>-->
+<!--    </div>-->
 
     <div class="input-group">
         <div class="input-group-prepend">
@@ -32,7 +48,6 @@
     </div>
 </form>
 
-<script src="/static/js/jquery/jquery.min.js"></script>
 <script src="/static/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
