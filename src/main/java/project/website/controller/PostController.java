@@ -32,15 +32,6 @@ public class PostController {
         return "post";
     }
 
-    @GetMapping("/post/new")
-    public String PostForm(@ModelAttribute("postForm")PostDto postDto, Model model){
-        return "post/postForm";
-    }
-
-    @PostMapping("/post/new")
-    public String createNewPost(@ModelAttribute("postForm")PostDto postDto, Model model){
-        return "redirect:";
-    }
 
     @PostConstruct
     public void init(){
