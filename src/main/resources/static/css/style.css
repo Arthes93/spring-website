@@ -1,0 +1,72 @@
+html,
+#markdown-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#markdown-container .section {
+    margin-bottom: 20px;
+}
+
+#content .mode {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    /* width: 425px; */
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#content .mode ul.submenu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    background-color: #eee;
+}
+
+#content .mode ul.submenu li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #f3f3f3;
+}
+
+#content .mode ul.submenu li:hover {
+    text-decoration: underline;
+}
+
+#content .mode .content {
+    padding: 10px;
+}
+
+#preview {
+    float: right;
+    height: 8;
+    overflow: auto;
+    margin-left: 20px;
+}
+
+textarea#markdown {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 800px;
+    /* height: 400px; */
+    overflow: auto;
+    font-size: 15px;
+    border: none;
+    /*  border: 2px solid #D1D1BC;*/
+    resize: vertical;
+    outline: none;
+}
